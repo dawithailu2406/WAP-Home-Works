@@ -19,7 +19,7 @@ dd ul{
 dt{
 	font-weight:bold;
 }
-authorBox{
+.authorBox{
 	clear:left;
 	font-style:italic;
 	margin-bottom:20pt;
