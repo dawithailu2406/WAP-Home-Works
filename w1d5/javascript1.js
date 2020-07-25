@@ -59,29 +59,6 @@ function filterLongWords(normal=[], i){
 }
 
 
-const bold = [1,3,5,3,3]; 
-
-
-// multiply each element by 10;
-const b = bold.map(function(elem, i, array) {
-  return elem * 10;
-});
-
-
-// return array with all elements equal to 3
-const cold=bold.filter(function(elem,i,array){
-    return elem==3;
-});
-
-
-// return the product of all elements
-const d=bold.reduce(function(value, elem, i, array){
-    return value*elem;
-});
-
-
-
-
 /* ******************************** Test ***************************** */
 
 
@@ -94,15 +71,24 @@ function myFunctionTest(expected, found) {
       return "TEST FAILED.  Expected " + expected + " found " + found;
     }
   }
+  
   console.log("Expected output of max(20,10) is 20  " + myFunctionTest(20, max(20, 10)));
+  console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(55, maxOfThree(55, 4, 44)));
+  console.log("Expected output of sum([1,2,3,4]) is 10  " + myFunctionTest(10,sum([1,2,3,4])));
+  console.log("Expected output of multiply([1,2,3,4]) is 24  " + myFunctionTest(24,multiply([1,2,3,4])));
+  console.log("Expected output of reverse('dawit') is tiwad  " + myFunctionTest('tiwad',reverse('dawit')));
+  console.log("Expected output of findLongestWord(['helen','nahom','berhane','luli']) is berhane  " + myFunctionTest('berhane',findLongestWord(['helen','nahom','berhane','luli'])));
+  console.log("Expected output of filterLongWords(['tesfahannes','life','assert','late'],7) is 'tesfahannes'" 
+  + myFunctionTest('tesfahannes',filterLongWords(['tesfahannes','life','assert','late'],7)));
+  
 
   console.assert((myFunctionTest(60, max(60, 50)))!="TEST SUCCEEDED",'Failed assert test');
 
-  console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(55, maxOfThree(55, 4, 44)));
-
-  console.log("Expected output of sum([1,2,3,4]) is 10  " + myFunctionTest(10,sum([1,2,3,4])));
-  console.log("Expected output of multiply([1,2,3,4]) is 24  " + myFunctionTest(24,multiply([1,2,3,4])));
-  console.log("Expected output of reverse('dawit') is nomis  " + myFunctionTest('tiwad',reverse('dawit')));
-  console.log("Expected output of findLongestWord(['helen','nahom','berhane','luli']) is berhane  " + myFunctionTest('berhane',findLongestWord(['helen','nahom','berhane','luli'])));
-  console.log("Expected output of filterLongWords(['Tesfahannes','life','assert','late'],7) is 'tesfahannes'" 
-  + myFunctionTest('tesfahannes',filterLongWords(['tesfahannes','life','assert','late'],7)));
+  console.assert((myFunctionTest(78, maxOfThree(78,45, 50)))=="TEST SUCCEEDED",'Failed assert test')
+  console.assert(( myFunctionTest(10,sum([1,2,3,4])))=="TEST SUCCEEDED",'Failed assert test')
+  console.assert(( myFunctionTest(24,multiply([1,2,3,4])))=="TEST SUCCEEDED",'Failed assert test')
+  console.assert(( myFunctionTest('tiwad',reverse('dawit')))=="TEST SUCCEEDED",'Failed assert test')
+  console.assert(( myFunctionTest('berhane',findLongestWord(['helen','nahom','berhane','luli'])))=="TEST SUCCEEDED",'Failed assert test')
+  console.assert(( myFunctionTest('tesfahannes',filterLongWords(['tesfahannes','life','assert','late'],7)))
+  =="TEST SUCCEEDED",'Failed assert test')
+  
