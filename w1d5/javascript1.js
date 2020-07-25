@@ -96,7 +96,7 @@ function myFunctionTest(expected, found) {
   }
   console.log("Expected output of max(20,10) is 20  " + myFunctionTest(20, max(20, 10)));
 
-  console.assert((myFunctionTest(60, max(60, 50)))==="TEST SUCCEEDED",'Failed assert test');
+  console.assert((myFunctionTest(60, max(60, 50)))!="TEST SUCCEEDED",'Failed assert test');
 
   console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(55, maxOfThree(55, 4, 44)));
 
@@ -104,5 +104,5 @@ function myFunctionTest(expected, found) {
   console.log("Expected output of multiply([1,2,3,4]) is 24  " + myFunctionTest(24,multiply([1,2,3,4])));
   console.log("Expected output of reverse('dawit') is nomis  " + myFunctionTest('tiwad',reverse('dawit')));
   console.log("Expected output of findLongestWord(['helen','nahom','berhane','luli']) is berhane  " + myFunctionTest('berhane',findLongestWord(['helen','nahom','berhane','luli'])));
-  console.log("Expected output of filterLongWords(['class','javascript','python','php'],5) is 'javascript'" 
-  + myFunctionTest('javascript',filterLongWords(['class','javascript','python','php'],5)));
+  console.log("Expected output of filterLongWords(['Tesfahannes','life','assert','late'],7) is 'tesfahannes'" 
+  + myFunctionTest('tesfahannes',filterLongWords(['tesfahannes','life','assert','late'],7)));
