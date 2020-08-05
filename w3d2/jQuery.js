@@ -78,7 +78,7 @@ $(function () {
 
         }
 
-            , 200);
+        , 200);
     }
 
     function resetOpacity(evt) {
