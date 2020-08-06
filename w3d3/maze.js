@@ -1,6 +1,7 @@
 
 var counter=0;
 var reset=0;
+var num =0;
 $(function(){
 
     $("#maze .boundary").mouseover(lossing);
@@ -17,20 +18,24 @@ $(function(){
 
 function mazeEnter(){
     reset++;
+    num++;
 }
 
 function lossing(evt) {
     $("#maze .boundary").addClass('youlose');
-     counter ++;
+    
+     
 }
 
 function endPoint(evt){
-    if(counter==0 && reset>0){
+    if(counter==0 && reset>0 && num==1){
         $("#status").text("You won");
     }
 
     else{
         $("#status").text("You lost");
+        counter ++;
+        num++;
     }
 }
 
